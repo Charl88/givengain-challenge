@@ -1,12 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { CreateTodoDto } from './dto/create-todo.dto'
 import { UpdateTodoDto } from './dto/update-todos.dto'
-
-export interface Todo {
-  id: number
-  title: string
-  completed: boolean
-}
+import { Todo } from './entities/todo.entity'
 
 @Injectable()
 export class TodosService {
