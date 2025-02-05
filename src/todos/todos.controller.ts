@@ -10,21 +10,17 @@ import {
   HttpException,
   HttpStatus,
   UsePipes,
-  ValidationPipe,
-  BadGatewayException,
-  BadRequestException,
-  InternalServerErrorException
+  ValidationPipe
 } from '@nestjs/common'
 import {
   ApiBasicAuth,
-  ApiOkResponse,
   ApiOperation,
-  ApiParam,
   ApiResponse,
   ApiTags
 } from '@nestjs/swagger'
 import { TodosService } from './todos.service'
 import { Todo } from './entities/todo.entity'
+import { ApiError } from './entities/error.entity'
 import { CreateTodoDto } from './dto/create-todo.dto'
 import { UpdateTodoDto } from './dto/update-todos.dto'
 
@@ -67,6 +63,10 @@ export class TodosController {
     description: 'The created Todo',
     type: Todo
   })
+  @ApiResponse({
+    status: 400,
+    type: ApiError
+  })
   create(@Body() createTodoDto: CreateTodoDto): Todo {
     return this.todosService.create(createTodoDto)
   }
@@ -78,6 +78,10 @@ export class TodosController {
     status: 200,
     description: 'The updated Todo',
     type: Todo
+  })
+  @ApiResponse({
+    status: 400,
+    type: ApiError
   })
   update(@Param('id') id: string, @Body() body: UpdateTodoDto): Todo {
     const todo = this.todosService.update(+id, body)

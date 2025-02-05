@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger'
 
 export class ApiError {
-  @ApiProperty({ example: 201, description: 'The status code of the error' })
+  @ApiProperty({ example: 400, description: 'The status code of the error' })
   statusCode: number
 
   @ApiProperty({
