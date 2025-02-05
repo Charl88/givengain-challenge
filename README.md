@@ -15,7 +15,7 @@ tests for the API.
 ### Clone the repository:
 
 ```
-git clone https://github.com/your-username/givengain-challenge.git
+git clone git@github.com:Charl88/givengain-challenge.git
 cd givengain-challenge
 ```
 
