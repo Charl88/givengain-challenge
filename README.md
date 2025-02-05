@@ -98,3 +98,11 @@ npm run test:cov
 `src/weather`: Contains the Weather feature modules, controllers, services, and DTOs.
 
 `src/common`: Contains common filters, interceptors, and other shared utilities.
+
+---
+
+## TODO:
+I would have liked to add some more robust error handling and validation on the weather endpoint. I felt that in
+the interest of time, I would rather focus on the core functionality of the API, and leave this as a future improvement.
+Ideally, the user does not need to know the exact error message from the weather API as it may give away sensitive information, but rather a more user-friendly version should be shown.
+It would therefore need a mapping mechanism and a deeper investigation into the types of errors that can be returned.
