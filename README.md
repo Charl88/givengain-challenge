@@ -5,10 +5,14 @@ An API to manage a Todo list and request weather conditions, using nextjs and sw
 Includes unit tests and end-to-end
 tests for the API.
 
+---
+
 ## Prerequisites
 
 - Node.js (>= 20.x) [preferably 22.x]
 - npm (>= 6.x) [preferably 10.x]
+
+---
 
 ## Installation
 
@@ -24,6 +28,8 @@ cd givengain-challenge
 ```
 npm install
 ```   
+
+---
 
 ## Running the Application
 
@@ -46,6 +52,8 @@ npm run start
 
 The application will be running at http://localhost:3000.
 
+---
+
 ## API Documentation
 The Swagger/OpenAPI documentation is available at http://localhost:3000/api once the API is running locally. 
 
@@ -55,6 +63,8 @@ For testing purposes, use [basic authentication](https://en.wikipedia.org/wiki/B
 Username: testuser
 Password: testpassword
 ```
+
+---
 
 ## Running Tests
 
@@ -75,6 +85,8 @@ npm run test:e2e
 ```
 npm run test:cov
 ```
+
+---
 
 ## Project Structure
 `src/main.ts`: Entry point of the application.
